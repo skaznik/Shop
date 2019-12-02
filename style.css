@@ -25,7 +25,7 @@ section {
     -ms-flex: 2;
     flex-direction: column;
     width: 100%;
-    height: 1000px;
+    height: 100%;
 
     /*background: aqua;*/
 }
@@ -33,7 +33,7 @@ section {
     display: flex;
     flex: 1;
     flex-flow: wrap;
-    width: 80%;
+    width: 70%;
     height: 100%;
     /*background: beige;*/
 }
@@ -42,6 +42,7 @@ section {
     max-width: 300px;
     margin: auto;
     margin-left: 5px;
+    margin-top: 5px;
     text-align: center;
     font-family: Arial;
     flex-wrap: wrap;
@@ -72,9 +73,4 @@ section {
     width: 20%;
     height: 100%;
 }
-.box {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
-    max-height: 100px;
-    margin: auto;
-    text-align: center;
-}
+
