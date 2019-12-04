@@ -20,10 +20,9 @@ const produkt = document.getElementsByClassName('cart-button');
 function dodaj() {
      if (boxCount <= 7) {
          boxCount++;
-         let glowa = document.createElement('div');
-         glowa.classList.add('info');
-         document.getElementById('basket').appendChild(glowa);
          let element1 = document.createElement('div');
+         element1.textContent='1';
+         element1.id = 'info1';
          element1.classList.add('info1');
          document.getElementById('info').appendChild(element1);
          let e1 = document.createElement('p');
@@ -33,6 +32,8 @@ function dodaj() {
          let e2 = document.createElement('button');
          e2.innerHTML = 'USUN';
          document.getElementById('info1').appendChild(e2);
+         let end = document.createElement('div');
+         document.getElementById('info').appendChild(end);
          console.log(boxCount);
      } else {
          alert('Możesz kupić tylko 8');
