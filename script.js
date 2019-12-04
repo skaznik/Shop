@@ -1,6 +1,8 @@
+let boxCount = 0;
+let sumCount = 0.00;
+
 window.onload = function () {
-    let boxCount = 0;
-    let sumCount = 0.00;
+
 
     let btn = document.getElementById('add');
     btn.addEventListener('click', function () {
@@ -11,8 +13,19 @@ window.onload = function () {
         alert('WYCZYSZONO');
         alert('GO');
     });
+const produkt = document.getElementsByClassName('cart-button');
+ for (let i = 0; i<produkt.length; i++) {
+     produkt[i].addEventListener('click', dodaj);
+ }
+function dodaj() {
+     if (boxCount <= 7) {
+         boxCount++;
+         console.log(boxCount);
+     } else {
+         alert('Możesz kupić tylko 8');
+     }
 
-
+}
 }
 
 

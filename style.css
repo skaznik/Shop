@@ -147,18 +147,5 @@ body {
     margin-top: 5px;
     height: 50%;
 }
-.info1-name {
-    width: 80%;
-    text-align: center;
-}
-.info1-button {
-    margin-right: 10px;
-    align-content: center;
-}
-.info2 {
-    display: flex;
-    margin: auto;
-    text-align: center;
-    height: 50%;
-}
+
 
