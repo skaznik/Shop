@@ -133,7 +133,6 @@ body {
 }
 .info {
     display: flex;
-    max-height: 20px;
     max-width: 100%;
     flex-direction: column;
     text-align: center;
@@ -145,7 +144,30 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 5px;
-    height: 50%;
+    height: auto;
+    background-color: lightskyblue;
+}
+.name {
+    width: 80%;
+    margin-left: 10px;
+    align-content: center;
+}
+.del {
+    margin-right: 5px;
+}
+.info2 {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    background-color: lightskyblue;
+
+}
+.cena {
+    align-content: center;
+    width: 50%;
+}
+.wartosc {
+    align-content: center;
 }
 
 
