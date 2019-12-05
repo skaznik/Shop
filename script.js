@@ -20,7 +20,7 @@ const produkt = document.getElementsByClassName('cart-button');
 function dodaj() {
      if (boxCount <= 7) {
          boxCount++;
-        // const info1 = document.querySelector('info1');
+
          let i1 = document.createElement('span');
          i1.classList.add('name');
         i1.innerHTML = boxCount+". Produkt : ";
