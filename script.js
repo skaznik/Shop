@@ -20,26 +20,20 @@ const produkt = document.getElementsByClassName('cart-button');
 function dodaj() {
      if (boxCount <= 7) {
          boxCount++;
-         let element1 = document.createElement('div');
-         element1.id = 'info1';
-         element1.classList.add('info1');
-         document.getElementById('info').appendChild(element1);
-         let e1 = document.createElement('p');
-         e1.innerHTML = 'Produkt';
-         e1.classList.add('name');
-         document.getElementById('info1').appendChild(e1);
-         let e2 = document.createElement('button');
-         e2.innerHTML = 'USUN';
-         e2.classList.add('del');
-         document.getElementById('info1').appendChild(e2);
-         let end = document.createElement('div');
-         end.id = 'info2';
-         end.classList.add('info2');
-         document.getElementById('info').appendChild(end);
-         let e3 = document.createElement('p');
-         e3.innerHTML = 'Cena';
-         //e3.classList.add('cena');
-         document.getElementById('info1').appendChild(e3)
+        // const info1 = document.querySelector('info1');
+         let i1 = document.createElement('span');
+         i1.classList.add('name');
+        i1.innerHTML = boxCount+". Produkt : ";
+        document.getElementById('info1').appendChild(i1);
+        let i2 = document.createElement('button');
+        i2.classList.add('del');
+        i2.innerHTML = "USUN";
+        document.getElementById('info1').appendChild(i2);
+        let i3 = document.createElement('p');
+        i3.classList.add('cena');
+        i3.innerHTML = "Cena";
+        document.getElementById('info2').appendChild(i3);
+         alert('Dodano'+boxCount)
          console.log(boxCount);
      } else {
          alert('Możesz kupić tylko 8');
