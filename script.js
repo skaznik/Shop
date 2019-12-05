@@ -21,7 +21,6 @@ function dodaj() {
      if (boxCount <= 7) {
          boxCount++;
          let element1 = document.createElement('div');
-         element1.textContent='1';
          element1.id = 'info1';
          element1.classList.add('info1');
          document.getElementById('info').appendChild(element1);
@@ -31,9 +30,16 @@ function dodaj() {
          document.getElementById('info1').appendChild(e1);
          let e2 = document.createElement('button');
          e2.innerHTML = 'USUN';
+         e2.classList.add('del');
          document.getElementById('info1').appendChild(e2);
          let end = document.createElement('div');
+         end.id = 'info2';
+         end.classList.add('info2');
          document.getElementById('info').appendChild(end);
+         let e3 = document.createElement('p');
+         e3.innerHTML = 'Cena';
+         //e3.classList.add('cena');
+         document.getElementById('info1').appendChild(e3)
          console.log(boxCount);
      } else {
          alert('Możesz kupić tylko 8');

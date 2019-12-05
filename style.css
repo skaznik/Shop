@@ -141,31 +141,23 @@ body {
     flex-wrap: wrap;
 }
 .info1 {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-    height: auto;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    height: 50px;
     background-color: lightskyblue;
 }
 .name {
-    width: 80%;
-    margin-left: 10px;
-    align-content: center;
+    width: 90%;
+    text-align: left;
 }
 .del {
-    margin-right: 5px;
+margin-right: 1px;
 }
 .info2 {
-    display: flex;
-    flex-direction: row;
     height: auto;
     background-color: lightskyblue;
 }
 .cena {
-    align-content: center;
-    width: 50%;
-}
-.wartosc {
     align-content: center;
 }
 
