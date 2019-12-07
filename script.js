@@ -19,21 +19,29 @@ const produkt = document.getElementsByClassName('cart-button');
  }
 function dodaj() {
      if (boxCount <= 7) {
+        let i0 = document.createElement('div');
+        i0.classList.add('info');
+        document.getElementById('basket').appendChild(i0);
+         let i1 = document.createElement('div');
+         i1.classList.add('info');
+         i1.setAttribute("id", "info1");
+         document.getElementById('info').appendChild(i1);
+         let i2 = document.createElement('div');
+         i2.classList.add('info1');
+         document.getElementById('info').appendChild(i2);
+         let i3 = document.createElement('div');
+         i3.classList.add('name');
+        i3.innerHTML = boxCount+". Produkt : ";
+        document.getElementById('info1').appendChild(i3);
+        let i4 = document.createElement('button');
+        i4.classList.add('del');
+        i4.innerHTML = "USUN";
+        document.getElementById('info1').appendChild(i4);
+        let i5 = document.createElement('p');
+        i5.classList.add('cena');
+        i5.innerHTML = "Cena";
+        document.getElementById('info2').appendChild(i5);
          boxCount++;
-
-         let i1 = document.createElement('span');
-         i1.classList.add('name');
-        i1.innerHTML = boxCount+". Produkt : ";
-        document.getElementById('info1').appendChild(i1);
-        let i2 = document.createElement('button');
-        i2.classList.add('del');
-        i2.innerHTML = "USUN";
-        document.getElementById('info1').appendChild(i2);
-        let i3 = document.createElement('p');
-        i3.classList.add('cena');
-        i3.innerHTML = "Cena";
-        document.getElementById('info2').appendChild(i3);
-         alert('Dodano'+boxCount)
          console.log(boxCount);
      } else {
          alert('Możesz kupić tylko 8');
