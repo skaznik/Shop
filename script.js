@@ -19,28 +19,44 @@ const produkt = document.getElementsByClassName('cart-button');
  }
 function dodaj() {
      if (boxCount <= 7) {
-        let i0 = document.createElement('div');
-        i0.classList.add('info');
-        document.getElementById('basket').appendChild(i0);
-         let i1 = document.createElement('div');
-         i1.classList.add('info');
-         i1.setAttribute("id", "info1");
-         document.getElementById('info').appendChild(i1);
-         let i2 = document.createElement('div');
-         i2.classList.add('info1');
-         document.getElementById('info').appendChild(i2);
-         let i3 = document.createElement('div');
-         i3.classList.add('name');
-        i3.innerHTML = boxCount+". Produkt : ";
-        document.getElementById('info1').appendChild(i3);
-        let i4 = document.createElement('button');
-        i4.classList.add('del');
-        i4.innerHTML = "USUN";
-        document.getElementById('info1').appendChild(i4);
-        let i5 = document.createElement('p');
-        i5.classList.add('cena');
-        i5.innerHTML = "Cena";
-        document.getElementById('info2').appendChild(i5);
+         let cena = parseFloat(this.value)
+         p0 = document.querySelector('h1');
+         p1 = p0.innerText;
+         console.log(p1);
+         c0 = document.querySelector('.price');
+         c1 = c0.innerText;
+         console.log(c1);
+         let t1 = document.createElement('tr');
+         t1.classList.add('tr1');
+         t1.setAttribute("id", "tr1");
+         document.getElementById('table').appendChild(t1);
+         console.log(t1);
+        let td1 = document.createElement('td');
+        td1.classList.add('td1');
+        td1.innerHTML = "test"
+        td1.setAttribute("id", "td1");
+        document.getElementById('tr1').appendChild(td1);
+        console.log(td1);
+         let td2 = document.createElement('td');
+         td2.classList.add('td2');
+         td2.setAttribute("id", "td2");
+         document.getElementById('tr1').appendChild(td2);
+         console.log(td2);
+         let t2 = document.createElement('tr');
+         t2.classList.add('tr2');
+         t2.setAttribute("id", "tr2");
+         document.getElementById('table').appendChild(t2);
+         console.log(t2);
+         let td3 = document.createElement('td');
+         td3.classList.add('td3');
+         td3.innerHTML = " Cena :"+cena;
+         td3.setAttribute("id", "td3");
+         document.getElementById('tr2').appendChild(td3);
+         console.log(td3);
+         let tf1 = document.createElement('tfoot');
+         tf1.classList.add('tf1');
+         tf1.setAttribute("id", "tf1");
+         document.getElementById('tr2').appendChild(tf1);
          boxCount++;
          console.log(boxCount);
      } else {
