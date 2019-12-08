@@ -19,11 +19,12 @@ const produkt = document.getElementsByClassName('cart-button');
  }
 function dodaj() {
      if (boxCount <= 7) {
-         let cena = parseFloat(this.value)
-         p0 = document.querySelector('h1');
-         p1 = p0.innerText;
-         console.log(p1);
-         c0 = document.querySelector('.price');
+         let cena = parseFloat(this.value);
+         console.log(cena);
+         sumCount = sumCount + cena;
+         console.log(sumCount);
+         document.getElementById('sumCount').innerHTML = sumCount +" PLN";
+        /* c0 = document.querySelector('.price');
          c1 = c0.innerText;
          console.log(c1);
          let t1 = document.createElement('tr');
@@ -56,7 +57,7 @@ function dodaj() {
          let tf1 = document.createElement('tfoot');
          tf1.classList.add('tf1');
          tf1.setAttribute("id", "tf1");
-         document.getElementById('tr2').appendChild(tf1);
+         document.getElementById('tr2').appendChild(tf1);*/
          boxCount++;
          console.log(boxCount);
      } else {
