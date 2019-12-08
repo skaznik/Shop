@@ -19,6 +19,7 @@ const produkt = document.getElementsByClassName('cart-button');
  }
 function dodaj() {
      if (boxCount <= 7) {
+         boxCount++;
          let cena = parseFloat(this.value);
          let name = this.title;
          console.log(cena);
@@ -26,7 +27,14 @@ function dodaj() {
          sumCount = sumCount + cena;
          console.log(sumCount);
          document.getElementById('sumCount').innerHTML = sumCount.toFixed(2) +" PLN";
-         boxCount++;
+        let newEl = document.createElement('div');
+        newEl.setAttribute('id', boxCount);
+        document.getElementById('shop-cart').appendChild(newEl);
+        let newNr = document.createElement('p');
+        newNr.textContent = boxCount;
+        document.getElementById(boxCount).appendChild(newNr);
+        console.log(newEl);
+        console.log(newNr);
          console.log(boxCount);
 
      } else {
