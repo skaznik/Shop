@@ -20,10 +20,12 @@ const produkt = document.getElementsByClassName('cart-button');
 function dodaj() {
      if (boxCount <= 7) {
          let cena = parseFloat(this.value);
+         let name = this.title;
          console.log(cena);
+         console.log(name);
          sumCount = sumCount + cena;
          console.log(sumCount);
-         document.getElementById('sumCount').innerHTML = sumCount +" PLN";
+         document.getElementById('sumCount').innerHTML = sumCount.toFixed(2) +" PLN";
          boxCount++;
          console.log(boxCount);
 
