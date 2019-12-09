@@ -22,19 +22,22 @@ function dodaj() {
          boxCount++;
          let cena = parseFloat(this.value);
          let name = this.title;
+         let newID = Math.random();
          console.log(cena);
          console.log(name);
+         console.log(newID);
          sumCount = sumCount + cena;
          console.log(sumCount);
          document.getElementById('sumCount').innerHTML = sumCount.toFixed(2) +" PLN";
         let newEl = document.createElement('div');
-        newEl.setAttribute('id', boxCount);
+        newEl.setAttribute('id', newID);
         document.getElementById('shop-cart').appendChild(newEl);
         let newNr = document.createElement('p');
-        newNr.textContent = boxCount;
-        document.getElementById(boxCount).appendChild(newNr);
+       //newNr.textContent = boxCount;
+        //document.getElementById(boxCount).appendChild(newNr);
         console.log(newEl);
         console.log(newNr);
+        //console.log(newID);
          console.log(boxCount);
 
      } else {
