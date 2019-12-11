@@ -30,14 +30,24 @@ function dodaj() {
          console.log(sumCount);
          document.getElementById('sumCount').innerHTML = sumCount.toFixed(2) +" PLN";
         let newEl = document.createElement('div');
-        newEl.setAttribute('id', newID);
-        document.getElementById('shop-cart').appendChild(newEl);
+        newEl.setAttribute('id', 'koszyk');
+        newEl.classList.add('koszyk');
+        document.getElementById('basket').appendChild(newEl);
         let newNr = document.createElement('p');
-       //newNr.textContent = boxCount;
-        //document.getElementById(boxCount).appendChild(newNr);
+        newNr.innerHTML = name;
+        document.getElementById('koszyk').appendChild(newNr);
+        let newUsun = document.createElement('button');
+        newUsun.innerText = 'USUN';
+        document.getElementById('koszyk').appendChild(newUsun);
+        let newCena = document.createElement('p');
+        newCena.innerHTML = cena;
+        document.getElementById('koszyk').appendChild(newCena);
         console.log(newEl);
         console.log(newNr);
-        //console.log(newID);
+        console.log(newNr);
+        console.log(newUsun);
+        console.log(newCena);
+        console.log('TADAM');
          console.log(boxCount);
 
      } else {

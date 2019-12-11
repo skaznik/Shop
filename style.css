@@ -131,6 +131,10 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
 }
+.koszyk {
+    display: flex;
+    flex-direction: column;
+}
 
 
 
