@@ -11,8 +11,8 @@ window.onload = function () {
     let btn1 = document.getElementById('clear');
     btn1.addEventListener('click', usun_all);
 
-    let btn2 = document.getElementById('usun');
-    btn2.addEventListener('click',usun);
+    //let btn2 = document.getElementById('usun');
+    //btn2.addEventListener('click',usun);
 
 const produkt = document.getElementsByClassName('cart-button');
  for (let i = 0; i<produkt.length; i++) {
