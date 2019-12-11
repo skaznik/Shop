@@ -9,10 +9,9 @@ window.onload = function () {
         alert('Dziękujemy za zakupy. \n Kupiłeś : '+boxCount+' przedmiotów,\n za łączną kwotę : ' +sumCount)});
 
     let btn1 = document.getElementById('clear');
-    btn1.addEventListener('click', function () {
-        alert('WYCZYSZONO');
-        alert('GO');
-    });
+    btn1.addEventListener('click', usun_all);
+
+
 const produkt = document.getElementsByClassName('cart-button');
  for (let i = 0; i<produkt.length; i++) {
      produkt[i].addEventListener('click', dodaj);
@@ -34,11 +33,8 @@ function dodaj() {
         newEl.classList.add('koszyk');
         document.getElementById('basket').appendChild(newEl);
         let newNr = document.createElement('p');
-        newNr.innerHTML = name;
+        newNr.innerHTML = name + '<button class="usun">USUN</button>';
         document.getElementById('koszyk').appendChild(newNr);
-        let newUsun = document.createElement('button');
-        newUsun.innerText = 'USUN';
-        document.getElementById('koszyk').appendChild(newUsun);
         let newCena = document.createElement('p');
         newCena.innerHTML = cena;
         document.getElementById('koszyk').appendChild(newCena);
@@ -55,6 +51,13 @@ function dodaj() {
      }
 
 }
+ function usun_all() {
+     let usun = document.getElementById('koszyk');
+     let rodzic = document.getElementById('basket');
+     rodzic.removeChild(usun);
+     boxCount = 0;
+     sumCount = 0.00;
+      }
 }
 
 

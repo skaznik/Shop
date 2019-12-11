@@ -134,6 +134,12 @@ body {
 .koszyk {
     display: flex;
     flex-direction: column;
+
+}
+.usun {
+    margin-right: 5px;
+    position: fixed;
+
 }
 
 
