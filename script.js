@@ -20,6 +20,10 @@ const produkt = document.getElementsByClassName('cart-button');
  for (let i = 0; i<produkt.length; i++) {
      produkt[i].addEventListener('click', dodaj);
  }
+ const btn2 = document.getElementById('usun');
+ for (let j = 0; j<boxCount.length; j++) {
+     btn2[j].addEventListener('click', usun);
+ }
  if (boxCount > 0) {
 
  }
@@ -40,10 +44,20 @@ function dodaj() {
         newEl.setAttribute('id', 'koszyk');
         newEl.classList.add('koszyk');
         document.getElementById('basket').appendChild(newEl);
-        let newNr = document.createElement('p');
-        newNr.innerHTML = name + '<button class="usun" id="usun">USUN</button>';
+        let newNr = document.createElement('div');
+        newNr.setAttribute('class', 'koszyk1');
+        newNr.setAttribute('id', 'koszyk1');
+        //newNr.innerHTML = name + '<p><button id="usun">USUN</button></p>';
         document.getElementById('koszyk').appendChild(newNr);
-        let newCena = document.createElement('p');
+        let newName = document.createElement('p');
+        newName.setAttribute('id', 'name');
+        newName.innerHTML = name;
+        document.getElementById('koszyk1').appendChild(newName);
+         let newBtnUsun = document.createElement('button');
+         newBtnUsun.setAttribute('id', 'usun');
+         newBtnUsun.innerHTML = 'USUN';
+         document.getElementById('koszyk1').appendChild(newBtnUsun);
+        let newCena = document.createElement('div');
         newCena.setAttribute('id', 'newCena');
         newCena.innerHTML = cena + ' PLN';
         document.getElementById('koszyk').appendChild(newCena);
@@ -69,7 +83,7 @@ function dodaj() {
     //let usun = document.getElementById('koszyk');
     //let rodzic = document.getElementById('basket');
     //rodzic.removeChild(usun);
-     //alert('go');
+     alert('go');
  }
 }
 
