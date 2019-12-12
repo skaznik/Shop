@@ -138,6 +138,7 @@ body {
 
 }
 .usun {
+    margin-left: auto;
     margin-right: 5px;
     position: fixed;
 
