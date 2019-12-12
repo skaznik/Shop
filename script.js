@@ -11,13 +11,19 @@ window.onload = function () {
     let btn1 = document.getElementById('clear');
     btn1.addEventListener('click', usun_all);
 
+
     //let btn2 = document.getElementById('usun');
     // btn2.addEventListener('click',usun);
+
 
 const produkt = document.getElementsByClassName('cart-button');
  for (let i = 0; i<produkt.length; i++) {
      produkt[i].addEventListener('click', dodaj);
  }
+ if (boxCount > 0) {
+
+ }
+
 function dodaj() {
      if (boxCount <= 7) {
          boxCount++;
@@ -38,17 +44,10 @@ function dodaj() {
         newNr.innerHTML = name + '<button class="usun" id="usun">USUN</button>';
         document.getElementById('koszyk').appendChild(newNr);
         let newCena = document.createElement('p');
+        newCena.setAttribute('id', 'newCena');
         newCena.innerHTML = cena + ' PLN';
         document.getElementById('koszyk').appendChild(newCena);
-        //console.log(newEl);
-        //console.log(newNr);
-        //console.log(newNr);
-        //console.log(newUsun);
-        //console.log(newCena);
-        //console.log('TADAM');
-         //console.log(boxCount);
-
-     } else {
+           } else {
          alert('Możesz kupić tylko 8');
      }
 
@@ -59,11 +58,18 @@ function dodaj() {
      rodzic_all.removeChild(usun_all);
      boxCount = 0;
      sumCount = 0.00;
+     let newSumCount = document.getElementById('sumCount');
+     newSumCount.innerText = '0,00 PLN';
       }
  function usun() {
-   // let usun = this.document.querySelector('div');
-    //let rodzic = document.getElementsByClassName('basket');
-   // rodzic.removeChild(usun);
+     //let usunCena = document.getElementById('newCena');
+     //sumCount = (sumCount - usunCena);
+     //console.log(usunCena);
+    // console.log(sumCount);
+    //let usun = document.getElementById('koszyk');
+    //let rodzic = document.getElementById('basket');
+    //rodzic.removeChild(usun);
+     //alert('go');
  }
 }
 
