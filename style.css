@@ -64,7 +64,7 @@ body {
 .shop-cart {
     display: flex;
     flex-flow: row wrap;
-    color: white;
+   background-color: aquamarine;
     width: 20%;
     height: 100%;
 }
@@ -74,24 +74,14 @@ body {
     width: 100%;
     flex-direction: column;
 }
-.summary1 {
+.checkout1 {
     display: flex;
     flex-direction: row;
     width: 100%;
+    color: aqua;
 }
-.summary1-button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 90%;
-    font-size: 18px;
-    margin: auto;
-}
-.summary1-box1 {
+.checkout1-box1 {
+    display: flex;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,2);
     width: 50%;
     margin: auto;
@@ -101,23 +91,38 @@ body {
     font-family: Arial;
     flex-wrap: wrap;
 }
-.summary1-box2 {
+.checkout1-box2 {
+    display: flex;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,2);
     width: 50%;
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     font-family: Arial;
     flex-wrap: wrap;
 }
-.summary2 {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,2);
-    width: 100%;
-    margin: auto;
+.checkout1-button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
     text-align: center;
-    font-family: Arial;
-    background-color: lightskyblue;
-    flex-wrap: wrap;
+    cursor: pointer;
+    width: 95%;
+    height: 95%;
+    font-size: 18px;
+    margin: auto;
+}
+.checkout1-button:hover {
+    opacity: 0.7;
+}
+.checkout2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
 }
 .basket {
     display: flex;
@@ -132,24 +137,4 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
 }
-.koszyk {
-    display: flex;
-    flex-direction: column;
-
-}
-.koszyk1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-}
-
-.usun {
-    margin-left: auto;
-    margin-right: 5px;
-    position: fixed;
-
-}
-
-
 
