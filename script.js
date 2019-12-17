@@ -11,29 +11,22 @@ window.onload = function () {
         alert('Dziękujemy za zakupy. \n Kupiłeś› : ' + boxCount + ' przedmiotów,\n za łączną kwotę : ' + sumCount)
     });
 
+    document.getElementById('basket').addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-cart-product')) {
+            removeElement(e.target);
+        }
+    });
+
     let btn1 = document.getElementById('clear');
     btn1.addEventListener('click', clearShopingCart);
 
 
-    //let btn2 = document.getElementById('usun');
-    // btn2.addEventListener('click',usun);
 
 
     const product = document.getElementsByClassName('cart-button');
     for (let i = 0; i < product.length; i++) {
         product[i].addEventListener('click', addProduct);
     }
-
-
-        const remove = document.getElementById('basket');
-        for(let i = 0; i <remove.length; i++) {
-            remove[i].addEventListener('click', removeProduct);
-            //console.log('usuwanie');
-        }
-    //let btnRemove = document.getElementById('basket');
-        //btnRemove.addEventListener('click',removeProduct);
-        //console.log("usuwanie");
-
 
     /* ss Nazwa metody w j. angielskim addProduct */
     /* ss Etapy: */
@@ -47,10 +40,8 @@ window.onload = function () {
             boxCount++;
             let price = parseFloat(this.value);
             let name = this.title;
-            let newID = Math.random();
             console.log(price);
             console.log(name);
-            console.log(newID);
             sumCount = sumCount + price;
             console.log(sumCount);
             document.getElementById('sumCount').innerHTML = sumCount.toFixed(2) + " PLN";
@@ -94,32 +85,19 @@ window.onload = function () {
         newSumCount.innerText = '0,00 PLN';
         console.log(boxCount);
     }
+    function updateSum(value) {
+        document.getElementById('sumCount').innerHTML = sumCount.toFixed(2);
+    }
 
     /* ss Nazwa metody w j. angielskim removeProduct */
     /* ss 6. UstawiÄ‡ eventLister na obiekcie o id basket a w nim sprawdzaÄ‡ czy klikniÄ™ty element ma klasÄ™ remove-cart-product */
     /* ss    jeĹ›li tak to odnosimy siÄ™ do rodzica, bÄ™dzie do div o klasie cart-product - usuwamy go */
     /* ss Od ceny koszyka odejmujemy cenÄ™ produktu usuniÄ™tego z koszyka */
-    function removeProduct() {
-        //let usunCena = document.getElementById('newCena');
-        //sumCount = (sumCount - usunCena);
-        //console.log(usunCena);
-        // console.log(sumCount);
-        //let usun = document.getElementById('koszyk');
-        //let rodzic = document.getElementById('basket');
-        //rodzic.removeChild(usun);
-        //alert('go');
-        console.log('usuwanie');
-        let child = document.getElementsByClassName('remove-cart-product');
-        let removePrice = child.value;
-        console.log('usuwana cena : ' + removePrice);
-        sumCount =- removePrice;
-        console.log('aktualnie w koszyku : ' + sumCount);
-        let newSumCount = document.getElementById('sumCount');
-        newSumCount.innerText = sumCount + 'PLN';
-        //boxCount--;
-        //let child = document.getElementsByClassName('remove-cart-product');
-        //let parrent = child.parentNode;
-        //parrent.removeChild(child);
-        //sumCount = sumCount - this.price;
+    function removeElement(clickedElement) {
+        let elementToRemove = clickedElement.parentElement;
+        document.getElementById('basket').removeChild(elementToRemove);
+        sumCount -= parseFloat(clickedElement.value);
+        updateSum(sumCount);
+        boxCount --;
     }
 }
