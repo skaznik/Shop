@@ -8,7 +8,7 @@ window.onload = function () {
 
     let btn = document.getElementById('add');
     btn.addEventListener('click', function () {
-        alert('Dziękujemy za zakupy. \n Kupiłeś› : ' + boxCount + ' przedmiotów,\n za łączną kwotę : ' + sumCount)
+        alert('Dziękujemy za zakupy. \n Kupiłeś : ' + boxCount + ' przedmiotów,\n za łączną kwotę : ' + sumCount)
     });
 
     document.getElementById('basket').addEventListener('click', function (e) {
@@ -44,7 +44,7 @@ window.onload = function () {
             console.log(name);
             sumCount = sumCount + price;
             console.log(sumCount);
-            document.getElementById('sumCount').innerHTML = sumCount.toFixed(2) + " PLN";
+            document.getElementById('sumCount').innerHTML = sumCount.toFixed(2);
             let newP = document.createElement('div');
             newP.classList.add('cart-produkt');
             newP.setAttribute('id', 'card-product');
@@ -54,13 +54,15 @@ window.onload = function () {
             newBtnClear.classList.add('remove-cart-product');
             newBtnClear.setAttribute('value', price);
             newBtnClear.innerHTML = "USUN";
-            //newName.innerHTML = name + newBtnClear;
+            let newLine = document.createElement('p');
+            newLine.innerHTML = "<hr>"
             let newPrice = document.createElement('p');
             newPrice.setAttribute('id', 'price');
-            newPrice.innerHTML = price + "PLN";
+            newPrice.innerHTML = price;
             newP.appendChild(newName);
-            newP.appendChild(newBtnClear);
             newP.appendChild(newPrice);
+            newP.appendChild(newBtnClear);
+            newP.appendChild(newLine);
             document.getElementById('basket').appendChild(newP);
 
         } else {
@@ -81,8 +83,9 @@ window.onload = function () {
         }
         boxCount = 0;
         sumCount = 0.00;
-        let newSumCount = document.getElementById('sumCount');
-        newSumCount.innerText = '0,00 PLN';
+        //let newSumCount = document.getElementById('sumCount');
+        //newSumCount.innerText = '0,00';
+        updateSum(sumCount);
         console.log(boxCount);
     }
     function updateSum(value) {
